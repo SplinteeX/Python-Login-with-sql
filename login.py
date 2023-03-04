@@ -87,7 +87,7 @@ def login():
         cursor.execute(query, values)
         käyttäjä = cursor.fetchone()
         if käyttäjä is not None and salasana == käyttäjä[2]:
-            print("Login successful!")
+            print("Kirjauduttu onnistuneesti!")
         else:
             print("Väärä sähköposti tai salasana.")
     except mysql.connector.Error as e:
